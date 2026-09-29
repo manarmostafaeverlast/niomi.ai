@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Niomi.ai — Coming Soon</title>
+  <meta name="description" content="Niomi.ai is currently under construction. Something new is taking shape.">
+  <meta name="theme-color" content="#f7f6f2">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230e0e0e'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='34' fill='%23f7f6f2'%3EN%3C/text%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page">
+    <header class="header">
+      <span class="wordmark" aria-label="Niomi.ai">
+        <span class="wordmark__name">NIOMI</span><span class="wordmark__tld">.AI</span>
+      </span>
+      <span class="meta" aria-hidden="true">System / Build 01</span>
+    </header>
+
+    <main class="stage">
+      <!-- Blueprint: decorative -->
+      <div class="stage__grid" aria-hidden="true"></div>
+
+      <svg class="blueprint" viewBox="0 0 1200 800" aria-hidden="true" focusable="false">
+        <defs>
+          <clipPath id="hex-clip">
+            <polygon points="600,70 885.8,235 885.8,565 600,730 314.2,565 314.2,235" />
+          </clipPath>
+        </defs>
+
+        <!-- construction circle -->
+        <circle class="bp bp--faint bp--dotted bp-fade" cx="600" cy="400" r="392" />
+
+        <!-- dimension: width (top) -->
+        <g class="bp-fade bp-fade--late">
+          <path class="bp bp--faint" d="M314.2 227 V22 M885.8 227 V22" />
+          <path class="bp bp--dim" d="M314.2 34 H566 M634 34 H885.8" />
+          <path class="bp bp--dim" d="M314.2 28 V40 M885.8 28 V40" />
+          <text class="bp-text bp-text--desk" x="600" y="38" text-anchor="middle">572.00</text>
+        </g>
+
+        <!-- dimension: height (left) -->
+        <g class="bp-fade bp-fade--late">
+          <path class="bp bp--faint" d="M306 235 H240 M306 565 H240" />
+          <path class="bp bp--dim" d="M252 235 V372 M252 428 V565" />
+          <path class="bp bp--dim" d="M246 235 H258 M246 565 H258" />
+          <text class="bp-text bp-text--desk" x="256" y="400" text-anchor="middle" transform="rotate(-90 252 400)">330.00</text>
+        </g>
+
+        <!-- vertical axis below the form -->
+        <path class="bp bp--faint bp--dashed bp-fade" d="M600 742 V800" />
+
+        <!-- hidden / planned inner edges -->
+        <path class="bp bp--faint bp--dashed bp-fade" d="M600 400 L314.2 235 M600 400 L885.8 235 M600 400 V730" />
+
+        <!-- completed edges (draw in once) -->
+        <path class="bp bp--solid bp-draw" style="--d: .2s" pathLength="1" d="M314.2 235 L600 70" />
+        <path class="bp bp--solid bp-draw" style="--d: .55s" pathLength="1" d="M600 70 L885.8 235" />
+        <path class="bp bp--solid bp-draw" style="--d: .9s" pathLength="1" d="M885.8 235 V565" />
+
+        <!-- planned edges -->
+        <path class="bp bp--dashed bp-fade" d="M600 730 L314.2 565 V235" />
+
+        <!-- edge in progress (loops) -->
+        <path class="bp bp--solid bp-build" pathLength="1" d="M885.8 565 L600 730" />
+
+        <!-- scanning line -->
+        <g clip-path="url(#hex-clip)">
+          <line class="bp bp--scan" x1="300" y1="0" x2="900" y2="0" />
+        </g>
+
+        <!-- nodes -->
+        <g class="bp-nodes">
+          <circle class="node node--done" cx="600" cy="70" r="4.5" />
+          <circle class="node node--done" cx="885.8" cy="235" r="4.5" />
+          <circle class="node node--done" cx="314.2" cy="235" r="4.5" />
+          <circle class="node node--done" cx="885.8" cy="565" r="4.5" />
+          <circle class="node" cx="600" cy="730" r="4.5" />
+          <circle class="node" cx="314.2" cy="565" r="4.5" />
+          <circle class="node node--faint" cx="600" cy="400" r="3.5" />
+          <circle class="node-halo" cx="885.8" cy="565" r="4.5" />
+          <circle class="node-head" r="3.5" />
+        </g>
+
+        <!-- annotations -->
+        <g class="bp-fade bp-fade--late">
+          <text class="bp-text bp-text--desk" x="616" y="60">A</text>
+          <text class="bp-text bp-text--desk" x="902" y="231">B (1, 0, 1)</text>
+          <text class="bp-text bp-text--desk bp-text--strong" x="902" y="580">C — ACTIVE</text>
+          <text class="bp-text bp-text--desk" x="614" y="756">D</text>
+          <text class="bp-text bp-text--desk" x="298" y="582" text-anchor="end">E — PENDING</text>
+          <text class="bp-text bp-text--desk" x="298" y="231" text-anchor="end">F (0, 1, 1)</text>
+          <text class="bp-text bp-text--desk bp-text--strong" x="758" y="672" text-anchor="middle" transform="rotate(-30 758 672)">BUILDING<tspan class="ellipsis">...</tspan></text>
+        </g>
+      </svg>
+
+      <!-- technical corner annotations -->
+      <span class="corner corner--tl" aria-hidden="true"><i class="corner__pulse"></i>Status: In Progress</span>
+      <span class="corner corner--tr" aria-hidden="true">X 572 · Y 330</span>
+      <span class="corner corner--bl" aria-hidden="true">Grid 40 · Scale 1:1</span>
+      <span class="corner corner--br" aria-hidden="true">Rev. 2026.09</span>
+
+      <div class="content">
+        <p class="label">
+          <span class="label__dot" aria-hidden="true"></span>
+          Under Construction
+        </p>
+
+        <h1 class="headline">Something New Is<br class="headline__break"> Taking Shape.</h1>
+
+        <p class="lede">
+          Niomi.ai is currently under construction while we build something better. We’ll be back soon.
+        </p>
+
+        <div class="phase">
+          <span class="phase__bars" aria-hidden="true">
+            <i class="is-done"></i><i class="is-done"></i><i class="is-active"></i><i></i>
+          </span>
+          <span class="phase__text">Phase 02 / 04 — Building</span>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p>
+        © 2026
+        <a href="https://humanstudiolabs.com/" target="_blank" rel="noopener noreferrer">Human Studio Labs</a>.
+        All rights reserved.
+      </p>
+    </footer>
+  </div>
+</body>
+</html>
